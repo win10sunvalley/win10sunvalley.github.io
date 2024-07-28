@@ -4,39 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Windows 10 Sun Valley" property="og:title" />
-	<meta content="Windows 10 Sun Valley website" property="og:description" />
-	<meta content="https://win10sunvalley.github.io" property="og:url" />
-	<meta content="https://raw.githubusercontent.com/win10sunvalley/win10sunvalley.github.io/main/res/favicon.jpg" property="og:image" />
-	<meta content="#0096FF" data-react-helmet="true" name="theme-color" />
-	<link rel="icon" href="https://raw.githubusercontent.com/win10sunvalley/win10sunvalley.github.io/main/res/favicon.jpg" type="image/jpeg">
-	<title>Under Development</title>
+    <meta content="Windows 10 Sun Valley mod for Windows 10" property="og:description" />
+    <meta content="https://win10sunvalley.github.io" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/win10sunvalley/win10sunvalley.github.io/main/res/background.png" property="og:image" />
+    <meta content="#0096FF" name="theme-color" />
+    <link rel="icon" href="https://raw.githubusercontent.com/win10sunvalley/win10sunvalley.github.io/main/res/favicon.png" type="image/jpeg">
+    <title>Windows 10 Sun Valley</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+
         body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            overflow-x: hidden;
+            position: relative; /* Required for the pseudo-element positioning */
+            background: url('https://raw.githubusercontent.com/win10sunvalley/win10sunvalley.github.io/main/res/background.png') no-repeat center center/cover;
         }
-        .container {
+
+        /* Pseudo-element for background blur effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.15); /* Adjust opacity */
+            backdrop-filter: blur(20px); /* Background blur effect */
+            z-index: -1; /* Behind all other content */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.70); /* 70% opacity */
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .header-logo {
+            width: 50px;
+            margin-right: 20px;
+            margin-left: -30px; /* Move logo more to the left */
+        }
+
+        .header-text {
+            flex-grow: 1;
+            font-size: 1.5rem;
+            color: black; /* Changed to black */
+            margin-right: auto; /* Pushes text to the right */
+        }
+
+        .header-button, .header-link {
+            background-color: #0096FF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: background-color 0.3s ease;
+            display: inline-block; /* To ensure consistent appearance */
+            text-align: center; /* Center text within button */
+        }
+
+        .header-button:hover, .header-link:hover {
+            background-color: #007acc;
+        }
+
+        .center-text {
             text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            max-width: 1200px;
+            padding: 20px;
+            z-index: 1;
         }
-        h1 {
-            font-size: 2rem;
-            color: #333;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #666;
+
+        @media (max-width: 1920px) {
+            .header-text {
+                font-size: 1.2rem;
+            }
+
+            .header-button, .header-link {
+                font-size: 0.9rem;
+            }
+
+            .center-text {
+                font-size: 1.2rem;
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Under Development</h1>
-        <p>We're working hard to get this site ready. Please check back later!</p>
+    <header>
+        <img src="https://raw.githubusercontent.com/win10sunvalley/win10sunvalley.github.io/main/res/favicon.png" alt="Logo" class="header-logo">
+        <div class="header-text">Windows 10 Sun Valley</div>
+        <a href="https://github.com/win10sunvalley" class="header-link">GitHub</a>
+        <a href="https://discord.gg/VtCep7mvKJ" class="header-link">Discord</a>
+        <a href="https://drive.google.com/uc?export=download&id=1Qtih92eIWnADZE8GWSJoHLE-5nNTUps-" class="header-button">Download</a>
+    </header>
+
+    <div class="center-text">
+        <h1>Introducing Windows 10 Sun Valley</h1>
+        <p>Windows 10 Sun Valley is aimed to restore the original Sun Valley Project by Microsoft before the announcement of Windows 11.</p>
     </div>
 </body>
 </html>
