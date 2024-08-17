@@ -1,2 +1,2 @@
-# win10sunvalley.github.io
-The official Windows 10 Sun Valley website. Made by winbo.
+# Windows 10 Sun Valley Website
+This repo has the source code of the website. It's also used for hosting.
